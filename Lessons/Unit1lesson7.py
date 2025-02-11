@@ -14,7 +14,21 @@ print("Now deciding if", y, "is a factor of", x, "...")
 rem = x % y
 if rem == 0:
     print("Yes!", y, "is a factor of", x)
-else:
-  print("No!", y, "is not a factor of", x)
-  (y != 0)
-
+    
+    #Modify 2 
+import math
+#modify
+x = input("Please input a whole number: ")
+x = int(x)
+y = input("Please input another nonzero whole number")
+y = int(y)
+print("Now deciding if", y, "is a factor of", x, "...")
+rem = x % y
+if rem == 0:
+    print("Yes!", y, "is a factor of", x)
+else: 
+  print("you can't enter zero. enter a non zero number")
+    
+  #Modify3
+x=input("only accept numbers between 1 and 20:")
+y=input("only accept numbers between 1 and 20")
