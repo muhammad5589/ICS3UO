@@ -16,3 +16,5 @@ if rem == 0:
     print("Yes!", y, "is a factor of", x)
 else:
   print("No!", y, "is not a factor of", x)
+  (y != 0)
+
