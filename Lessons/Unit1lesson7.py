@@ -31,4 +31,4 @@ else:
     
   #Modify3
 x=input("only accept numbers between 1 and 20:")
-y=input("only accept numbers between 1 and 20")
+y=input("only accept numbers between 1 and 20:")
