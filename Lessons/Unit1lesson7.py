@@ -31,4 +31,7 @@ else:
     
   #Modify3
 x=input("only accept numbers between 1 and 20:")
+if (x < 1) and (x > 20):
+  print("Error: the number must be between 1 and 20.")
+else:
 y=input("only accept numbers between 1 and 20:")
