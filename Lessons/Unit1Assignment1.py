@@ -12,4 +12,5 @@ import math
 print ("I will find the cube's inner diagonal for any edge length!")
 j= int(input("Please enter the edge length of your cube:"))
 s=math.sqrt(3)*j
-print(s)
+d= j*s
+print("your inner diagonal is: %.2f" % d)
