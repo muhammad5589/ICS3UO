@@ -1,11 +1,13 @@
 print("Welcome to the even and odd detector!") 
-x = input("Enter your first number")
-y = input("Enter your second number") 
+print("This program determines if the product of two whole positive numbers will be even or odd!")
+x = input("Enter your first number:")
+y = input("Enter your second number:") 
 if (x % 2==0) and (y % 2==0):
   print("the product of both numbers are even")
 elif (x % 2==1) and (y % 2==1):
-  print("the bproduct of both numbers is odd")
-
+  print("the product of both numbers is odd")
+else 
+  print("the product of both numbers are even")
 - 2
 import math
 
@@ -31,20 +33,20 @@ nrem= drem % 5
   
 pamnt=nrem
   
-if qamnt==0:
+if qamnt==0 and damnt==0 and namnt==0 and pamnt==0:
   print("You have a dollar")
   
 else:
   print("cents are:")
   
-if qamnt>0:
-  print(qamnt,"quarters")
-
-if damnt>0:
-  print(damnt,"dimes")
+  if qamnt>0:
+    print(qamnt,"quarters")
   
-if namnt>0:
-  print(namnt,"nickles")
-  
-if pamnt>0:
-  print(pamnt, "pennies") 
+  if damnt>0:
+    print(damnt,"dimes")
+    
+  if namnt>0:
+    print(namnt,"nickles")
+    
+  if pamnt>0:
+    print(pamnt, "pennies") 
