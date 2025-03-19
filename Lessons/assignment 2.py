@@ -18,39 +18,31 @@ u_guess (int) = Stores the number input by the user on each guess.
 import random
 
 # Initialize the game
-correct_numb = random.randint(1, 100)  
-# Randomly generate a number between 1 and 100 and assign it to 'correct_numb'
+random_number = random.randint(1, 100)  # Generate a random number between 1 and 100
+attempts = 0  # Initialize attempts count
+max_attempts = 6  # Set the maximum number of attempts
+game_over = False  # Boolean to control the loop
 
-guesscount = 0  
-# Set the initial guess count to 0 to track how many guesses the user has made
+# Game Introduction
+print("Welcome to the Number Guessing Game!")
+print("I've picked a number between 1 and 100. Can you guess what it is?")
+print("You have", max_attempts, "attempts to find the correct number. Good luck!")
 
-# Print introduction to the game
-print("Hello! Welcome to the number guessing game!")
-print("I am thinking of a number between 1 and 100. It is your turn to guess what it is.")
-print("You have a maximum of six (6) tries.")
-
-# Loop for user guesses
-while guesscount < 6:
-    guesscount += 1  
-    # Increment the guess count by 1 with each iteration
-
-    u_guess = int(input("Guess #%d: " % guesscount))  
-    # Prompt the user to input their guess and convert it to an integer
-
-    # Check if the guess is correct, too high, or too low
-    if u_guess < correct_numb:
-        print("Higher!")  
-        # If the guess is too high, prompt the user to guess a higher number
-    elif u_guess > correct_numb:
-        print("Lower!")  
-        # If the guess is too low, prompt the user to guess a lower number
+# Game loop
+while attempts < max_attempts and not game_over:
+    attempts += 1  # Increment attempt count
+    
+    print("Attempt", attempts, ": Enter your guess:")
+    user_input = int(input())  # Get user input
+    
+    if user_input > random_number:
+        print("Too high! Try a lower number.")
+    elif user_input < random_number:
+        print("Too low! Try a higher number.")
     else:
-        print("You guessed right!")  
-        # If the guess is correct, notify the user they won
-        guesscount = 7  
-        # End the game early by setting guesscount to 7
+        print("Congratulations! You guessed the number in", attempts, "tries! 🎉")
+        game_over = True  # Set game_over to True to end the loop
 
-# After the loop ends, check if the user failed to guess the number
-if u_guess != correct_numb:
-    print("Sorry: you are out of guesses! The answer was %d. Better luck next time!" % correct_numb)
-    # If the guess is still wrong after 6 attempts, inform the user and show the correct number
+# If user runs out of attempts
+if not game_over:
+    print("Game Over! You've used all", max_attempts, "attempts. The correct number was", random_number, ".")
