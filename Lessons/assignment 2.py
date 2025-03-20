@@ -7,11 +7,13 @@ Due date : 21 March 2025
 """
 Program : Number Guessing Game
 Description : A game where the user tries to guess a randomly generated number between 1 and 100 within 6 tries.
+
 VARIABLE DICTIONARY :
-correct_numb (int) = Stores the randomly generated number between 1 and 100.
-guesscount (int) = Tracks the number of guesses the user has made.
-max_tries (int) = The maximum number of guesses allowed (6).
-u_guess (int) = Stores the number input by the user on each guess.
+random_number (int) = Stores the randomly generated number between 1 and 100.
+attempts (int) = Tracks the number of guesses the user has made.
+max_attempts (int) = The maximum number of guesses allowed (6).
+game_over (bool) = A boolean flag to control whether the game loop should continue or end.
+user_input (int) = Stores the number input by the user on each guess.
 """
 
 
